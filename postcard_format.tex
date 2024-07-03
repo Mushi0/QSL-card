@@ -1,0 +1,109 @@
+\documentclass[a6paper,landscape,7pt]{scrartcl}
+\usepackage[ngerman]{babel}  % German umlauts
+\usepackage[utf8]{inputenc}  % German umlauts
+\usepackage{hyperref}  % seems to be important for multicols
+\pagenumbering{gobble}  % disable page numbering
+\usepackage{multicol}  % split page in two parts
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=0.3cm]{geometry}
+\usepackage{parskip}
+
+\pagestyle{empty}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\setlength\columnseprule{.4pt}
+\begin{document}
+\begin{multicols}{2}
+    \vspace*{0cm}
+
+    \begin{minipage}{2cm}
+    {\huge \textbf{M7ABC}} % Callsign
+    
+    \smallskip
+    
+    \textbf{My Name}
+    
+    \smallskip
+    
+    \footnotesize
+    My Flat
+    My City
+    
+    My Postcode Country
+    
+    \end{minipage}
+    \begin{minipage}{1.3cm}
+    \centering \includegraphics[width=0.9cm]{rsgb_logo_2016mono.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{3.5cm} % very ugly hack with \vphantom ;)
+    \framebox[3.5cm][l]{\scriptsize QSO WITH: \vphantom{$\int\limits_{\dfrac aa}$}}
+    
+    \smallskip
+    
+    \framebox[3.5cm][l]{\scriptsize VIA: \vphantom{$\int\limits_{\dfrac aa}$}}
+    \end{minipage}
+    
+    \bigskip
+    \smallskip
+    
+    \textit{\small{I am pleased to confirm the following QSO(s):}}
+    \begin{center}
+    \begin{tabular}{|P{2.5cm}|P{1.5cm}|}
+    \hline
+    \vphantom{$\dfrac a b$} \bf Date (DMY) & \bf Time (UTC) \\
+    \hline
+    \hline
+    \vphantom{$\dfrac b b$} & \\
+    \hline
+    \end{tabular}
+    \begin{tabular}{|P{1cm}|P{1cm}|P{1cm}|P{1.2cm}|}
+    \hline
+    \vphantom{$\dfrac a b$} \bf MHz & \bf Mode & \bf RST  & \bf QSL \\
+    \hline
+    \hline
+    \vphantom{$\dfrac b b$} & & & PSE/TNX\\
+    \hline
+    \end{tabular}
+    
+    \smallskip
+    
+    \footnotesize\textbf{Member of:}
+    \end{center}
+    
+    \bigskip
+
+    \small
+    
+    \textbf{Rig:} \makebox[4cm]{\hrulefill} \quad 
+    
+    \textbf{Power:} \makebox[1.5cm]{\hrulefill}\,W \quad 
+    
+    \textbf{Antenna:} \makebox[3cm]{\hrulefill}
+    
+    \bigskip
+    
+    \textbf{Comments:}
+    
+    \bigskip
+    
+    \textbf{QTH:}
+    
+    \columnbreak\par
+    
+    \vspace*{0cm}
+    \hfill\framebox(40,50){\scriptsize Postage}\hspace*{1cm}\par
+    \vspace{0.2\textheight}
+    \rule{6.0cm}{0.01cm}\vspace*{1cm}\\ % Name
+    \rule{6.0cm}{0.01cm}\vspace*{1cm}\\ % Street + Nr
+    \rule{2.2cm}{0.01cm}\hspace*{0.2cm}\rule{3.6cm}{0.01cm}\vspace*{1cm}\\ % zip code + town
+    \rule{6.0cm}{0.01cm}\\ % country
+
+    \null\hfill vy 73, \makebox[3.5cm]{\dotfill}
+\end{multicols}
+\end{document}
